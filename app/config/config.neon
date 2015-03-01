@@ -1,0 +1,13 @@
+php:
+	date.timezone: Europe/Prague
+
+application:
+	mapping:
+		*: RPG\Application\*Presenter
+
+session:
+	expiration: 14 days
+
+includes:
+	- parameters.neon
+	- services.neon

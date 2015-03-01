@@ -1,0 +1,15 @@
+{
+	"require": {
+		"php": ">= 5.5.0",
+		"nette/nette": "~2.3"
+	},
+	"require-dev": {
+		"nette/tester": "~1.3"
+	},
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-0": {
+			"RPG": "app/"
+		}
+	}
+}

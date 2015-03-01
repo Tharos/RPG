@@ -1,0 +1,3 @@
+services:
+	- RPG\Application\Routing\RouterFactory
+	router: @RPG\Application\Routing\RouterFactory::createRouter
