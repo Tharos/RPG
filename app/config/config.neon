@@ -8,6 +8,19 @@ application:
 session:
 	expiration: 14 days
 
+doctrine:
+	user: root
+	password:
+	dbname: rpg
+	metadata:
+		RPG: %appDir%/RPG
+
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension
+	events: Kdyby\Events\DI\EventsExtension
+	annotations: Kdyby\Annotations\DI\AnnotationsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+
 includes:
 	- parameters.neon
 	- services.neon
