@@ -3,3 +3,6 @@ services:
 	router: @RPG\Application\Routing\RouterFactory::createRouter
 	- RPG\Game\ItemEventsInitializer
 	- RPG\Game\Notifier
+	- RPG\Game\Marketplace
+	- RPG\Game\Control\IBuyItemControlFactory
+	- RPG\Game\Players

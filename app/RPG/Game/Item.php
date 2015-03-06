@@ -23,7 +23,7 @@ class Item extends Object
 	/**
 	 * @var Closure[]
 	 */
-    public $onOwnerChanged = [];
+	public $onOwnerChanged = [];
 
 	/**
 	 * @ORM\Id
@@ -41,6 +41,7 @@ class Item extends Object
 
 	/**
 	 * ORM\Column(type="boolean", options={"default": 1})
+	 *
 	 * @var bool
 	 */
 	private $isReleased = TRUE;
@@ -72,6 +73,16 @@ class Item extends Object
 
 		$owner->addItem($this);
 		$this->isReleased = FALSE;
+	}
+
+
+
+	/**
+	 * @return int
+	 */
+	public function getId()
+	{
+		return $this->id;
 	}
 
 
@@ -138,6 +149,16 @@ class Item extends Object
 	public function moveToMarket()
 	{
 		$this->place = self::PLACE_MARKET;
+	}
+
+
+
+	/**
+	 * @return string
+	 */
+	public function getPlace()
+	{
+		return $this->place;
 	}
 
 

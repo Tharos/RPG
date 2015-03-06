@@ -3,12 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>RPG</title>
+	<link rel="stylesheet" href="{$basePath}/css/reset.css">
+	<link rel="stylesheet" href="{$basePath}/css/rpg.css">
 </head>
 
 <body>
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
-
-	{include content}
+	<div id="page" class="l-cols">
+		<div n:foreach="$flashes as $flash" n:class="flash, 'flash-' . $flash->type">{$flash->message}</div>
+		{include content}
+	</div>
 
 	{block scripts}
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

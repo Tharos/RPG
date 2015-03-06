@@ -51,15 +51,38 @@ class Player extends Object
 
 
 	/**
+	 * @return string
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
+
+
+
+	/**
+	 * @return Item[]
+	 */
+	public function getItems()
+	{
+		return $this->items->toArray();
+	}
+
+
+
+	/**
 	 * @param Item $item
 	 * @throws NotEnoughCreditsException
 	 */
 	public function buyItem(Item $item)
 	{
+		if ($item->getOwner() === $this) {
+			throw new InvalidArgumentException("Player $this already owns item $item.");
+		}
 		$price = $item->getPrice();
 
 		if ($price > $this->credits) {
-			throw new NotEnoughCreditsException($this->credits, $price);
+			throw new NotEnoughCreditsException("Player $this doesn't have enough credits to buy item $item.", $this->credits, $price);
 		}
 
 		$this->credits -= $price;

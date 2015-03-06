@@ -58,6 +58,16 @@ class Message extends Object
 
 
 	/**
+	 * @return Player
+	 */
+	public function getPlayer()
+	{
+		return $this->player;
+	}
+
+
+
+	/**
 	 * @return DateTime
 	 */
 	public function getCreated()

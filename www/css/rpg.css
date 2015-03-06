@@ -1,0 +1,110 @@
+body {
+	background: white;
+	font: 15px/23px 'Open Sans', sans-serif;
+	color: #333;
+}
+
+h2, h3 {
+	color: #358000;
+	line-height: 34px;
+	margin: 0;
+	padding-top: 4px;
+	padding-bottom: 8px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+p, ul, table {
+	margin-bottom: 23px;
+}
+
+ul {
+	padding-left: 30px;
+}
+
+ul ul {
+	margin-bottom: 0;
+}
+
+form select {
+	width: 100px;
+	cursor: pointer;
+}
+
+form label {
+	display: block;
+	text-align: left;
+	padding-right: 10px;
+}
+
+form input[type=submit] {
+	font-size: 18px;
+	width: 100px;
+}
+
+form .error {
+	color: red;
+}
+
+#page {
+	width: 700px;
+	margin: 30px auto 50px;
+	border: 1px solid #ccc;
+	background: #fafafa;
+}
+
+.l-cols .l-mainContent, .l-cols .l-extraContent {
+	width: 330px;
+	padding: 5px 10px 1px;
+}
+
+.l-cols .l-mainContent {
+	float: left;
+}
+
+.l-cols .l-extraContent {
+	float: right;
+}
+
+.items {
+	list-style-type: none;
+}
+
+.messages {
+	padding: 0;
+}
+
+.message {
+	font-size: 13px;
+	list-style-type: none;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	padding: 2px 4px;
+	background: #fefefe;
+
+}
+
+.message-recipient {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.message-content {
+	display: block;
+}
+.flash {
+	font-size: 16px;
+	text-align: center;
+	line-height: 34px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.flash-success {
+	color: green;
+}

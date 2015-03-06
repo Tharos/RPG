@@ -22,12 +22,13 @@ class NotEnoughCreditsException extends RuntimeException implements IException
 
 
 	/**
+	 * @param string $message
 	 * @param int $current
 	 * @param int $required
 	 */
-	public function __construct($current, $required)
+	public function __construct($message, $current, $required)
 	{
-		parent::__construct();
+		parent::__construct($message);
 
 		$this->current = $current;
 		$this->required = $required;

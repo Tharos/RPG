@@ -1,1 +1,26 @@
 {block #content}
+
+<div class="l-cols clearfix">
+	<div class="l-mainContent">
+		<h2>Marketplace</h2>
+		{control buyItemControl}
+
+		<h2>Players</h2>
+		{foreach $players as $player}
+			<h3>{$player->getId()} (has {$player->getCredits()} credits)</h3>
+			<ul class="items" n:if="!empty($player->getItems())">
+				<li n:foreach="$player->getItems() as $item">{$item->getId()} (costs {$item->getPrice()} credits, is in {$item->getPlace()})</li>
+			</ul>
+		{/foreach}
+	</div>
+	<div class="l-extraContent">
+		<h2>Messages</h2>
+		<ul class="messages" n:if="!empty($messages)">
+			<li class="message" n:foreach="$messages as $message">
+				<span class="message-recipient">{$message->getPlayer()->getId()}</span>
+				<span class="message-date">{$message->getCreated()|date:'j. n. Y H:i:s'}</span>
+				<span class="message-content">{$message->getContent()}</span>
+			</li>
+		</ul>
+	</div>
+</div>
