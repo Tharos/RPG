@@ -1,0 +1,6 @@
+doctrine:
+	autoGenerateProxyClasses: false
+	host: 127.0.0.1
+	user: root
+	password:
+	dbname: rpg

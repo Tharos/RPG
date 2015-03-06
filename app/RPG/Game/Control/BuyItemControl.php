@@ -43,7 +43,7 @@ class BuyItemControl extends Control
 
 	public function render()
 	{
-		$this->template->render(__DIR__ . '/buyItemControl.latte');
+		$this['form']->render();
 	}
 
 
