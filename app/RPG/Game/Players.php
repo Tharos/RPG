@@ -43,14 +43,10 @@ class Players extends Object
 	{
 		$players = $this->playerRepository->findBy([], ['id' => 'ASC']);
 
-		$ids = array_map(function (Player $player) {
-			return $player->id;
-		}, $players);
-
 		$this->playerRepository->createQueryBuilder('p')
 			->select('partial p.{id}')
 			->leftJoin('p.items', 'i')->addSelect('i')
-			->where('p.id IN (:players)')->setParameter('players', $ids)
+			->where('p IN (:players)')->setParameter('players', $players)
 			->orderBy('i.id')
 			->getQuery()->getResult();
 
